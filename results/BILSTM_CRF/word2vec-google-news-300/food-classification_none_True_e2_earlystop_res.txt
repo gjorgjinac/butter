@@ -1,0 +1,85 @@
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &  B-FOOD &  I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.0 &     0.0 &      0.892452 &  0.892452 &      0.297484 &      0.796470 \\
+recall    &     0.0 &     0.0 &      1.000000 &  0.892452 &      0.333333 &      0.892452 \\
+f1-score  &     0.0 &     0.0 &      0.943170 &  0.892452 &      0.314390 &      0.841734 \\
+support   &  2115.0 &   662.0 &  23044.000000 &  0.892452 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 2
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &  B-FOOD &  I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.0 &     0.0 &      0.892452 &  0.892452 &      0.297484 &      0.796470 \\
+recall    &     0.0 &     0.0 &      1.000000 &  0.892452 &      0.333333 &      0.892452 \\
+f1-score  &     0.0 &     0.0 &      0.943170 &  0.892452 &      0.314390 &      0.841734 \\
+support   &  2115.0 &   662.0 &  23044.000000 &  0.892452 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 2
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &  B-FOOD &  I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.0 &     0.0 &      0.892423 &  0.892181 &      0.297474 &      0.796444 \\
+recall    &     0.0 &     0.0 &      0.999696 &  0.892181 &      0.333232 &      0.892181 \\
+f1-score  &     0.0 &     0.0 &      0.943019 &  0.892181 &      0.314340 &      0.841599 \\
+support   &  2115.0 &   662.0 &  23044.000000 &  0.892181 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 2
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &  B-FOOD &  I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.0 &     0.0 &      0.892452 &  0.892452 &      0.297484 &      0.796470 \\
+recall    &     0.0 &     0.0 &      1.000000 &  0.892452 &      0.333333 &      0.892452 \\
+f1-score  &     0.0 &     0.0 &      0.943170 &  0.892452 &      0.314390 &      0.841734 \\
+support   &  2115.0 &   662.0 &  23044.000000 &  0.892452 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 2
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &  B-FOOD &  I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.0 &     0.0 &      0.892444 &  0.892374 &      0.297481 &      0.796463 \\
+recall    &     0.0 &     0.0 &      0.999913 &  0.892374 &      0.333304 &      0.892374 \\
+f1-score  &     0.0 &     0.0 &      0.943127 &  0.892374 &      0.314376 &      0.841695 \\
+support   &  2115.0 &   662.0 &  23044.000000 &  0.892374 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 2

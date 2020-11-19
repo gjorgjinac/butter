@@ -1,0 +1,86 @@
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &       B-FOOD &      I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.900243 &    0.827273 &      0.984852 &  0.974091 &      0.904123 &      0.973882 \\
+recall    &     0.874704 &    0.824773 &      0.987502 &  0.974091 &      0.895660 &      0.974091 \\
+f1-score  &     0.887290 &    0.826021 &      0.986176 &  0.974091 &      0.899829 &      0.973970 \\
+support   &  2115.000000 &  662.000000 &  23044.000000 &  0.974091 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 222
+
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &       B-FOOD &      I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.877941 &    0.821767 &      0.981293 &  0.969211 &      0.893667 &      0.968738 \\
+recall    &     0.846809 &    0.787009 &      0.985680 &  0.969211 &      0.873166 &      0.969211 \\
+f1-score  &     0.862094 &    0.804012 &      0.983482 &  0.969211 &      0.883196 &      0.968938 \\
+support   &  2115.000000 &  662.000000 &  23044.000000 &  0.969211 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 204
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &       B-FOOD &      I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.891228 &    0.835570 &      0.980198 &  0.969986 &      0.902332 &      0.969203 \\
+recall    &     0.840662 &    0.752266 &      0.988110 &  0.969986 &      0.860346 &      0.969986 \\
+f1-score  &     0.865207 &    0.791733 &      0.984138 &  0.969986 &      0.880359 &      0.969463 \\
+support   &  2115.000000 &  662.000000 &  23044.000000 &  0.969986 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 218
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &       B-FOOD &      I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.891228 &    0.835570 &      0.980198 &  0.969986 &      0.902332 &      0.969203 \\
+recall    &     0.840662 &    0.752266 &      0.988110 &  0.969986 &      0.860346 &      0.969986 \\
+f1-score  &     0.865207 &    0.791733 &      0.984138 &  0.969986 &      0.880359 &      0.969463 \\
+support   &  2115.000000 &  662.000000 &  23044.000000 &  0.969986 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 218
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &       B-FOOD &      I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.891228 &    0.835570 &      0.980198 &  0.969986 &      0.902332 &      0.969203 \\
+recall    &     0.840662 &    0.752266 &      0.988110 &  0.969986 &      0.860346 &      0.969986 \\
+f1-score  &     0.865207 &    0.791733 &      0.984138 &  0.969986 &      0.880359 &      0.969463 \\
+support   &  2115.000000 &  662.000000 &  23044.000000 &  0.969986 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Final Epochs = 218

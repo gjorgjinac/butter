@@ -1,0 +1,16 @@
+\begin{table}
+\centering
+\caption{Results}
+\label{tab:results}
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &       B-FOOD &      I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+precision &     0.894161 &    0.814346 &      0.990270 &  0.977267 &      0.899592 &      0.977887 \\
+recall    &     0.926714 &    0.874622 &      0.984855 &  0.977267 &      0.928730 &      0.977267 \\
+f1-score  &     0.910146 &    0.843409 &      0.987555 &  0.977267 &      0.913703 &      0.977519 \\
+support   &  2115.000000 &  662.000000 &  23044.000000 &  0.977267 &  25821.000000 &  25821.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
