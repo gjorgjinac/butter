@@ -15,7 +15,7 @@ import nltk
 from sklearn.metrics import classification_report
 
 
-def NER_driver(fold = None):
+def NER_driver(fold = None, vectorizer_model_name):
     
     # --------------SETTINGS-------------
     max_sentence_length = 50
@@ -23,7 +23,6 @@ def NER_driver(fold = None):
     BATCH_SIZE = 256
     # EMBEDDING = 40
     # pre_proc = "lemma"
-    vectorizer_model_name = 'lexical_300'
     missing_values_handled = False
     pre_proc = "none"
     task_name = "food-classification"
@@ -137,7 +136,8 @@ if __name__ == "__main__":
     parser.add_argument("--fold", type = int, dest = "which_fold", default = None)
     args = parser.parse_args()
 
-    NER_driver(args.which_fold)
+    for vectorizer in ['glove-twitter-25','glove-twitter-100','glove-twitter-200', 'glove-wiki-gigaword-50']:
+        NER_driver(args.which_fold, vectorizer)
 
 
 
