@@ -31,6 +31,7 @@ class SentenceGetter(object):
         except:
             return None
 
+
 def aggregate_report_pkl(report, vectorizer_model_name, file_name, n_epochs, nn_model_name='BILSTM_CharEmb'):
     base = os.path.join("results", nn_model_name, vectorizer_model_name)
     os.makedirs(base, exist_ok=True)
@@ -40,12 +41,14 @@ def aggregate_report_pkl(report, vectorizer_model_name, file_name, n_epochs, nn_
             rez = pickle.load(f_in)
     else:
         rez = []
-    
+
     rez.append(report)
     with open(os.path.join(base, file_name), "wb") as f_out:
         pickle.dump(rez, f_out)
 
-def save_report_to_file(report, vectorizer_model_name, file_name, n_epochs, which_fold = None, nn_model_name='BILSTM_CharEmb'):
+
+def save_report_to_file(report, vectorizer_model_name, file_name, n_epochs, which_fold=None,
+                        nn_model_name='BILSTM_CharEmb'):
     base = os.path.join("results", nn_model_name, vectorizer_model_name)
     os.makedirs(base, exist_ok=True)
 
@@ -53,11 +56,10 @@ def save_report_to_file(report, vectorizer_model_name, file_name, n_epochs, whic
     ltx = ret.to_latex(label="tab:results", caption="Results")
     print(ret)
     with open(os.path.join(base, file_name), "a") as f_out:
-        f_out.write(f"{ltx}\n")
-        f_out.write(f"Final Epochs = {n_epochs}\n")
+        f_out.write(ltx+"\n")
+        f_out.write("Final Epochs = {n_epochs}\n".format(n_epochs=n_epochs))
         if which_fold:
-            f_out.write(f"Fold = {which_fold}\n") 
-
+            f_out.write("Fold = {which_fold}\n".format(which_fold=which_fold))
 
 
 def get_pred_and_ground_string(Y_test, predictions, idx2tag):
@@ -115,7 +117,10 @@ def get_char_indices(data, max_len_char, max_sentence_length, char2idx):
 
 def get_embedding_weights(vectorizer_model_name, vectorizer_model_size, missing_values_handled, word2idx):
     bpath = "vectors"
-    vectors_path = os.path.join(bpath, f'missing_values_handled_{missing_values_handled}/{vectorizer_model_name}')
+    vectors_path = os.path.join(bpath,
+                                'missing_values_handled_{missing_values_handled}/{vectorizer_model_name}'.format(
+                                    missing_values_handled=missing_values_handled,
+                                    vectorizer_model_name=vectorizer_model_name))
     vectors = pd.read_csv(vectors_path, index_col=[0])
     embedding_weights = [vectors.loc[word.lower(), :] if word in vectors.index else np.zeros(vectorizer_model_size) for
                          word, index in word2idx.items()]
@@ -154,8 +159,8 @@ def read_df_from_tsv_file(file_path):
     return pd.read_csv(file_path, encoding="latin1", delimiter='\t').fillna(method="ffill")
 
 
-def read_folds(task_name, which_fold, bpath = "data"):
-    full_path = os.path.join(bpath, f"full-{task_name}.txt")
+def read_folds(task_name, which_fold, bpath="data"):
+    full_path = os.path.join(bpath, "full-{task_name}.txt".format(task_name=task_name))
     train_path = os.path.join(bpath, "folds", task_name, str(which_fold), "train.tsv")
     test_path = os.path.join(bpath, "folds", task_name, str(which_fold), "test.tsv")
     return read_df_from_tsv_file(full_path), \
@@ -163,11 +168,10 @@ def read_folds(task_name, which_fold, bpath = "data"):
            read_df_from_tsv_file(test_path)
 
 
-
 def read_data_for_task(task_name, bpath="data"):
-    full_path = os.path.join(bpath, f"full-{task_name}.txt")
-    train_path = os.path.join(bpath, f"train-{task_name}.txt")
-    test_path = os.path.join(bpath, f"test-{task_name}.txt")
+    full_path = os.path.join(bpath, "full-{task_name}.txt".format(task_name=task_name))
+    train_path = os.path.join(bpath, "train-{task_name}.txt".format(task_name=task_name))
+    test_path = os.path.join(bpath, "test-{task_name}.txt".format(task_name=task_name))
     return read_df_from_tsv_file(full_path), \
            read_df_from_tsv_file(train_path), \
            read_df_from_tsv_file(test_path)
