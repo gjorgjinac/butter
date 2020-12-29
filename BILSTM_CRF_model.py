@@ -4,11 +4,10 @@ os.environ["HDF5_DISABLE_VERSION_CHECK"] = "1"
 import copy
 
 import numpy as np
-from keras.layers import (LSTM, Bidirectional, Dense, Embedding,
+from tensorflow.keras.layers import (LSTM, Bidirectional, Dense, Embedding,
                           SpatialDropout1D, TimeDistributed, concatenate)
-from keras.models import Input, Model
-from keras.optimizers import Adam, RMSprop
-from keras.utils import to_categorical
+from tensorflow.keras.models import Input, Model
+from tensorflow.keras.utils import to_categorical
 from keras_preprocessing.sequence import pad_sequences
 from model_definition import models
 from tf2crf import CRF
