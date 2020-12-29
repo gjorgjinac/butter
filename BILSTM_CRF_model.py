@@ -4,9 +4,9 @@ os.environ["HDF5_DISABLE_VERSION_CHECK"] = "1"
 import copy
 
 import numpy as np
-from tensorflow.keras.layers import (LSTM, Bidirectional, Dense, Embedding,
+from tensorflow.keras.layers import (LSTM,Input, Bidirectional, Dense, Embedding,
                           SpatialDropout1D, TimeDistributed, concatenate)
-from tensorflow.keras.models import Input, Model
+from tensorflow.keras.models import  Model
 from tensorflow.keras.utils import to_categorical
 from keras_preprocessing.sequence import pad_sequences
 from model_definition import models
