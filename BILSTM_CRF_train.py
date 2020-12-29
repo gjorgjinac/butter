@@ -15,7 +15,7 @@ import nltk
 from sklearn.metrics import classification_report
 
 
-def NER_driver(fold = None, vectorizer_model_name):
+def NER_driver(fold = None, vectorizer_model_name='lexical_300'):
     
     # --------------SETTINGS-------------
     max_sentence_length = 50
