@@ -110,21 +110,37 @@ def NER_driver(fold = None, vectorizer_model_name):
     
     if fold != None:
         if vectorizer_model_name != "lexical":
-            report_file_name_txt = f"{task_name}_{pre_proc}_{missing_values_handled}_e{EPOCHS}_earlystop_fold={fold}_res.txt"
-            report_file_name_pkl = f"{task_name}_{pre_proc}_{missing_values_handled}_e{EPOCHS}_earlystop_fold={fold}_res.pkl"
+            report_file_name_txt = "{task_name}_{pre_proc}_{missing_values_handled}_e{EPOCHS}_earlystop_fold={fold}_res.txt".format(
+                task_name=task_name, pre_proc=pre_proc, missing_values_handled = missing_values_handled, EPOCHS = EPOCHS, fold=fold
+            )
+            report_file_name_pkl = "{task_name}_{pre_proc}_{missing_values_handled}_e{EPOCHS}_earlystop_fold={fold}_res.pkl".format(
+                task_name=task_name, pre_proc=pre_proc, missing_values_handled = missing_values_handled, EPOCHS = EPOCHS, fold=fold
+            )
         else:
-            report_file_name_txt = f"{task_name}_{pre_proc}_e{EPOCHS}_earlystop_fold={fold}_res.txt"
-            report_file_name_pkl = f"{task_name}_{pre_proc}_e{EPOCHS}_earlystop_fold={fold}_res.pkl"
+            report_file_name_txt = "{task_name}_{pre_proc}_e{EPOCHS}_earlystop_fold={fold}_res.txt".format(
+                task_name=task_name, pre_proc=pre_proc,  EPOCHS = EPOCHS, fold=fold
+            )
+            report_file_name_pkl = "{task_name}_{pre_proc}_e{EPOCHS}_earlystop_fold={fold}_res.pkl".format(
+                task_name=task_name, pre_proc=pre_proc, EPOCHS = EPOCHS, fold=fold
+            )
         save_report_to_file(report, vectorizer_model_name=vectorizer_model_name, file_name=report_file_name_txt, n_epochs = len(history.history['loss']), which_fold = fold, nn_model_name = nn_model_name)
         aggregate_report_pkl(report, vectorizer_model_name=vectorizer_model_name, file_name=report_file_name_pkl, n_epochs = len(history.history['loss']), nn_model_name = nn_model_name)
 
     else:
         if vectorizer_model_name != "lexical":
-            report_file_name_txt = f"{task_name}_{pre_proc}_{missing_values_handled}_e{EPOCHS}_earlystop_res.txt"
-            report_file_name_pkl = f"{task_name}_{pre_proc}_{missing_values_handled}_e{EPOCHS}_earlystop_res.pkl"
+            report_file_name_txt = "{task_name}_{pre_proc}_{missing_values_handled}_e{EPOCHS}_earlystop_res.txt".format(
+                task_name=task_name, pre_proc=pre_proc, missing_values_handled = missing_values_handled, EPOCHS = EPOCHS, fold=fold
+            )
+            report_file_name_pkl = "{task_name}_{pre_proc}_{missing_values_handled}_e{EPOCHS}_earlystop_res.pkl".format(
+                task_name=task_name, pre_proc=pre_proc, missing_values_handled = missing_values_handled, EPOCHS = EPOCHS, fold=fold
+            )
         else:
-            report_file_name_txt = f"{task_name}_{pre_proc}_e{EPOCHS}_earlystop_res.txt"
-            report_file_name_pkl = f"{task_name}_{pre_proc}_e{EPOCHS}_earlystop_res.pkl"
+            report_file_name_txt = "{task_name}_{pre_proc}_e{EPOCHS}_earlystop_res.txt".format(
+                task_name=task_name, pre_proc=pre_proc, EPOCHS = EPOCHS, fold=fold
+            )
+            report_file_name_pkl = "{task_name}_{pre_proc}_e{EPOCHS}_earlystop_res.pkl".format(
+                task_name=task_name, pre_proc=pre_proc,  EPOCHS = EPOCHS, fold=fold
+            )
         save_report_to_file(report, vectorizer_model_name=vectorizer_model_name, file_name=report_file_name_txt, n_epochs = len(history.history['loss']), nn_model_name = nn_model_name)
         aggregate_report_pkl(report, vectorizer_model_name=vectorizer_model_name, file_name=report_file_name_pkl, n_epochs = len(history.history['loss']), nn_model_name = nn_model_name)
 
