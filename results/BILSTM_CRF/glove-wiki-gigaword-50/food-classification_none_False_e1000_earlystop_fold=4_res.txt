@@ -1,0 +1,13 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+{} &       B-FOOD &       I-FOOD &             O &  accuracy &     macro avg &  weighted avg \\
+\midrule
+f1-score  &     0.870788 &     0.863101 &      0.977208 &  0.958251 &      0.903699 &      0.959045 \\
+precision &     0.846123 &     0.808149 &      0.985800 &  0.958251 &      0.880024 &      0.960543 \\
+recall    &     0.896934 &     0.926070 &      0.968765 &  0.958251 &      0.930589 &      0.958251 \\
+support   &  2348.000000 &  1028.000000 &  16840.000000 &  0.958251 &  20216.000000 &  20216.000000 \\
+\bottomrule
+\end{tabular}
+
+Final Epochs = 141
+Fold = 4

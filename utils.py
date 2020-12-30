@@ -53,7 +53,7 @@ def save_report_to_file(report, vectorizer_model_name, file_name, n_epochs, whic
     os.makedirs(base, exist_ok=True)
 
     ret = pd.DataFrame.from_dict(report)
-    ltx = ret.to_latex(label="tab:results", caption="Results")
+    ltx = ret.to_latex()
     print(ret)
     with open(os.path.join(base, file_name), "a") as f_out:
         f_out.write(ltx+"\n")
