@@ -7,10 +7,10 @@ export PYTHONHASHSEED=42
 if [ -z "$1" ]
 	then 
 		echo "no argument"
-		~/IJS/gpop_env/bin/python3 BILSTM_CRF_train.py
+		~/venvs/foodis5/bin/python3 BILSTM_CRF_train.py
 	else
 		echo "argument $1"
-		~/IJS/gpop_env/bin/python3 BILSTM_CRF_train.py --fold $1
+		~/venvs/foodis5/bin/python3 BILSTM_CRF_train.py --fold $1
 
 fi
 #~/IJS/gpop_env/bin/python3 BILSTM_CRF_train.py --fold $1
