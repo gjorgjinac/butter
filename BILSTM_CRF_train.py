@@ -35,8 +35,8 @@ def NER_driver(fold = None, vectorizer_model_name='lexical_300'):
     tf.random.set_seed(seed)
 
     # seed sanity check (seed is set in bash wrapper)
-    assert hash("test") == 1357165105927715737
-    print("SEED CHECKS DONE")
+    # assert hash("test") == 1357165105927715737
+    # print("SEED CHECKS DONE")
 
 
     # --------------SETTINGS-------------

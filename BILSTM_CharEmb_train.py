@@ -35,8 +35,8 @@ def NER_driver(fold = None):
     tf.random.set_seed(seed)
 
     # seed sanity check (set in bash wrapper)
-    assert hash("test") == 1357165105927715737
-    print("SEED CHECKS DONE")
+    # assert hash("test") == 1357165105927715737
+    # print("SEED CHECKS DONE")
 
 
     # --------------SETTINGS-------------
