@@ -1,7 +1,7 @@
-#BuTTER
+# BuTTER
 This repository contains the source code for running the BuTTER models introduced in [1].
 
-####Usage:
+#### Usage:
 Install the necessary dependencies listed in requirements.txt:    `pip install -r requirements.txt`
 The code can be run through the python or the shell scripts.
 You can run the BiLSTM-CRF model using the `BILSTM_CRF_train.py` script 
